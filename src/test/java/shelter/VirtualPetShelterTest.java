@@ -15,8 +15,8 @@ public class VirtualPetShelterTest {
     @Test
     public void hungerShouldGoDownForAllPetsBy1WhenFed() {
         underTest = new VirtualPetShelter();
-        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10);
-        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10);
+        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10,0);
+        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10,0);
         underTest.add(pet1);
         underTest.add(pet2);
         underTest.feedAllPets();
@@ -27,8 +27,8 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldReduceThirstBy1ForAllPetsWhenWatered() {
         underTest = new VirtualPetShelter();
-        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10);
-        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10);
+        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10,0);
+        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10,0);
         underTest.add(pet1);
         underTest.add(pet2);
         underTest.waterAllPets();
@@ -39,8 +39,8 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldReduceBoredomBy1WhenPlaying() {
         underTest = new VirtualPetShelter();
-        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10);
-        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10);
+        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10,0);
+        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10,0);
         underTest.add(pet1);
         underTest.add(pet2);
         underTest.playAllPets();
@@ -51,7 +51,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldAddOnePet() {
         underTest = new VirtualPetShelter();
-        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10);
+        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10,0);
         underTest.add(pet1);
         VirtualPet retrievedPet = underTest.findPet("Rusty");
         Assertions.assertThat(retrievedPet.equals(pet1));
@@ -60,8 +60,8 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldRemoveOnePet() {
         underTest = new VirtualPetShelter();
-        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10);
-        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10);
+        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10,0);
+        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10,0);
         underTest.add(pet1);
         underTest.add(pet2);
         underTest.adopt(pet1);
@@ -72,8 +72,8 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldAddTwoPets() {
         underTest = new VirtualPetShelter();
-        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10);
-        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10);
+        pet1 = new VirtualPet("Rusty", "smells like a Stargazer lily fresh with morning dew", 10, 10, 10,0);
+        pet2 = new VirtualPet("Lazy", "White Mutt", 10, 10, 10,0);
         underTest.add(pet2);
         underTest.add(pet1);
         Collection<VirtualPet> allPets = underTest.getAllPets();

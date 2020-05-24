@@ -5,12 +5,14 @@ import java.util.Scanner;
 
 public class VirtualPetShelterApp {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
         int userAction = 0;
         String userInput;
         VirtualPetShelter shelterPets = new VirtualPetShelter();
         shelterPets.add(new VirtualPet("Rusty", "German Shepard", 10, 10, 10, 5));
         shelterPets.add(new VirtualPet("Tula", "White Bunny", 10, 10, 10, 5));
+
         System.out.println("Thank you for volunteering at Hare's Pet Shelter!");
         System.out.println();
 
@@ -69,10 +71,11 @@ public class VirtualPetShelterApp {
                 shelterPets.add(new VirtualPet(userInput, petDescription, 10, 10, 10, 5));
                 System.out.println("We will take good care of " + userInput);
                 shelterPets.tick();
-            } if (userAction == 6){
+            }
+            if (userAction == 6){
                 System.out.println("Which pets cage would you like to clean?");
                 userInput = input.nextLine();
-                System.out.println("You have chose to clean " + userInput + "s cage!");
+                System.out.println("You have chosen to clean " + userInput + "s cage!");
                 shelterPets.cleanPetCage(userInput);
             }
         }
