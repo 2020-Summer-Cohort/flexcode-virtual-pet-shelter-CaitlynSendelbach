@@ -18,6 +18,7 @@ public class VirtualPetShelterApp {
 
 
         while (userAction != 7) {
+            System.out.println();
             System.out.println("This is the status of your pets:");
             System.out.println();
             System.out.println("Name: " + "Hunger: " + "Thirst:  " + "Boredom:  " + "Cleanliness:  ");
@@ -55,7 +56,7 @@ public class VirtualPetShelterApp {
                 shelterPets.showDescriptions();
                 userInput = input.nextLine();
                 System.out.println("You have chosen to adopt " + userInput);
-                System.out.println("Take good care of them!");
+                System.out.println("Take good care of them! Give them lots of love...and snacks!");
                 shelterPets.adopt(shelterPets.findPet(userInput));
             }
             if (userAction == 5) {
@@ -73,6 +74,10 @@ public class VirtualPetShelterApp {
                 userInput = input.nextLine();
                 System.out.println("You have chosen to clean " + userInput + "s cage!");
                 shelterPets.cleanPetCage(userInput);
+            }else{
+                System.out.println("This is not an option!");
+                System.out.println("The pets are confused!");
+                System.out.println("The pets have hurt themselves in confusion!");
             }
             shelterPets.tick();
         }
