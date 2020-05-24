@@ -37,12 +37,10 @@ public class VirtualPetShelterApp {
             if (userAction == 1) {
                 System.out.println("You have chosen to feed the pets");
                 shelterPets.feedAllPets();
-                shelterPets.tick();
             }
             if (userAction == 2) {
                 System.out.println("You have chose to water the pets");
                 shelterPets.waterAllPets();
-                shelterPets.tick();
             }
             if (userAction == 3) {
                 System.out.println("Which pet would you like to play with?");
@@ -51,15 +49,14 @@ public class VirtualPetShelterApp {
                 System.out.println();
                 System.out.println("Ok you play with " + userInput);
                 shelterPets.playWithOnePet(userInput);
-                shelterPets.tick();
             }
             if (userAction == 4) {
                 System.out.println("Which pet would you like to adopt?");
+                shelterPets.showDescriptions();
                 userInput = input.nextLine();
-                System.out.println("You have chose to adopt " + userInput);
+                System.out.println("You have chosen to adopt " + userInput);
                 System.out.println("Take good care of them!");
                 shelterPets.adopt(shelterPets.findPet(userInput));
-                shelterPets.tick();
             }
             if (userAction == 5) {
                 String petDescription;
@@ -70,7 +67,6 @@ public class VirtualPetShelterApp {
                 petDescription = input.nextLine();
                 shelterPets.add(new VirtualPet(userInput, petDescription, 10, 10, 10, 5));
                 System.out.println("We will take good care of " + userInput);
-                shelterPets.tick();
             }
             if (userAction == 6){
                 System.out.println("Which pets cage would you like to clean?");
@@ -78,6 +74,7 @@ public class VirtualPetShelterApp {
                 System.out.println("You have chosen to clean " + userInput + "s cage!");
                 shelterPets.cleanPetCage(userInput);
             }
+            shelterPets.tick();
         }
 
 

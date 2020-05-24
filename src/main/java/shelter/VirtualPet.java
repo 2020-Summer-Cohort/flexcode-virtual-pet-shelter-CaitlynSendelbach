@@ -64,6 +64,7 @@ public class VirtualPet {
         hunger = hunger + 5;
         thirst = thirst + 5;
         boredom = boredom + 5;
+        cleanliness = cleanliness + 5;
     }
 
     public void clean(int dirtiness) {
